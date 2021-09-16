@@ -1,5 +1,7 @@
 # project-pie
-Project Python (Started on 16.09)
+Python Project (Started on 16.09)
+
+---
 
 project-pie is the repository created by Daniel Lambert for the Delivery Hero Tech Academy.
 
