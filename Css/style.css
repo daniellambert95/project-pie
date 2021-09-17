@@ -23,11 +23,36 @@ img{
     border-radius: 20px;
 }
 
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0em;
+}
+
+.signin{
+    margin-right: 10px;
+}
+
+#calltoaction{
+    background-color: green;
+    color: white;
+    border-radius: 20px;
+}
+#calltoaction:hover{
+    background-color: white !important;
+    color: green !important;
+    border-radius: 20px !important;
+    border: solid green 2px;
+}
 li{
-    list-style: none;
-    display: inline-block;
-    margin: 0px 10% 0px 10%;
-    
+    list-style: none; 
+    padding: .5em 2em .5em 2em;
+    border: solid white 2px;
 }
 
 a{  color: inherit;
