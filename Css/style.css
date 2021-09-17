@@ -34,7 +34,7 @@ ul{
     padding: 0em;
 }
 
-.signin{
+.navmenu2{
     margin-right: 10px;
 }
 
@@ -60,7 +60,7 @@ a{  color: inherit;
 
 }
 
-a:hover{
+a.link1:hover{
     color: green;
     border-bottom: solid green 2px;
     padding-bottom: 4px;
