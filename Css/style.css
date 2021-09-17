@@ -19,7 +19,7 @@ img{
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 20%;
+    width: 350px;
     border-radius: 20px;
 }
 
@@ -34,29 +34,40 @@ ul{
     padding: 0em;
 }
 
-.navmenu2{
-    margin-right: 10px;
-}
-
-#calltoaction{
+.btn a{
     background-color: green;
     color: white;
+    padding: .5em 2em .5em 2em;
     border-radius: 20px;
 }
-#calltoaction:hover{
-    background-color: white !important;
-    color: green !important;
-    border-radius: 20px !important;
+
+.btn a:hover{
+    background-color: white;
+    color: green ;
+    border-radius: 20px;
     border: solid green 2px;
 }
+
+.btn2 a{
+    color: green;
+    padding: .5em 2em .5em 2em;
+    border-radius: 20px;
+    border: solid green 2px;
+}
+
 li{
     list-style: none; 
-    padding: .5em 2em .5em 2em;
+    padding: .5em 1.2em .5em 1.2em;
     border: solid white 2px;
+}
+
+li.btn{
+    padding: .5em .2em .5em 0em;
 }
 
 a{  color: inherit;
     text-decoration: none; 
+    padding: 0 10px 0 10px;
 
 }
 
@@ -64,4 +75,9 @@ a.link1:hover{
     color: green;
     border-bottom: solid green 2px;
     padding-bottom: 4px;
+}
+
+li a#currentpage{
+    padding-bottom: 8px;
+    border-bottom: solid green 2px;
 }
