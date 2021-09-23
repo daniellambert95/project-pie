@@ -57,7 +57,7 @@ a{  color: inherit;
 a.link1:hover{
     color: green;
     border-bottom: solid green 2px;
-    padding-bottom: 4px;
+    padding-bottom: 8px;
     transition: all .1s;
 }
 
