@@ -22,6 +22,7 @@ with the purpose of building an application with the Python syntax & language.
 - Created a Github page so we have a live site that we can visit at any time and share with others
 
 **Stage three**
+
 Development setup
 - Created a virtual environment for our project using python3
 
