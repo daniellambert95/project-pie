@@ -13,15 +13,15 @@ with the purpose of building an application with the Python syntax & language.
 
 # Set up
 
-*Stage one*
+**Stage one**
 - Created a repository with GIT and Github so we can host our project files somewhere.
 - Added a README.md file & .gitignore
 
-*Stage two*
+**Stage two**
 - Created some HTML files as well as CSS, then built a front end that would be the basis of where our project will be uploaded to. 
 - Created a Github page so we have a live site that we can visit at any time and share with others
 
-*Stage three*
+**Stage three**
 Development setup
 - Created a virtual environment for our project using python3
 
@@ -31,4 +31,4 @@ To create the virtual environment
 	The environment must be activated each time when working in the command line
 3. Enter the .gitignore file and add /myenv/ as this environment should not be commit and just incase it is it will now be ignored by GIT
 
-*Stage four coming soon*
+**Stage four coming soon**
