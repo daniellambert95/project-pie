@@ -37,4 +37,13 @@ To create the virtual environment
 The environment must be activated each time when working in the command line
 3. Enter the .gitignore file and add /myenv/ as this environment should not be commit and just incase it is it will now be ignored by GIT
 
-**Stage four coming soon**
+**Stage four**
+
+Warehouse ordering programme
+
+- Create a script that will guide a user through ordering an item from a list of warehouse stock data
+
+1. Programme runs on the command line interface
+2. Files can be found in the folder CLI warehouse
+
+**Stage five coming soon**

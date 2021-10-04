@@ -20,10 +20,12 @@ print("What would you like to do next?\n1. List items in the warehouse\n2. Searc
 choice1 = int(input("Select the operation you would like to process by entering 1, 2 or 3: "))
 # If they pick 1
 if choice1 == 1:
+    print("\nItems in warehouse 1:\n")
     for item in warehouse1:
-        print("Warehouse 1 -",item)
+        print("-",item)
+    print("\nItems in warehouse 2:\n")
     for item in warehouse2:
-        print("Warehouse 2 -",item)
+        print("-",item)
 # Else, if they pick 2
 elif choice1 == 2:
     order = "Y"
