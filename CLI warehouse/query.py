@@ -1,21 +1,14 @@
 #!/usr/bin/env python3
-"""Command line interface to query the stock.
 
-To iterate the source data you can use the following structure:
-
-for item in warehouse1:
-    # Your instructions here.
-    # The `item` name will contain each of the strings (item names) in the list.
-"""
 from data import warehouse1, warehouse2
 
-# YOUR CODE STARTS HERE
+# Welcome message
 print("Welcome to the Warehouse Ordering System")
-# Get the user name
+# Assigning the user name to a variable
 name = input("To proceed further please enter your name here: ")
-# Greet the user
+# Welcome the user
 print(f"Welcome back {name}!")
-# Show the menu and ask to pick a choice
+# Show the menu and ask the user to pick a choice
 print("What would you like to do next?\n1. List items in the warehouse\n2. Search for an item and place an order\n3. Quit")
 choice1 = int(input("Select the operation you would like to process by entering 1, 2 or 3: "))
 # If they pick 1
@@ -72,19 +65,9 @@ elif choice1 == 2:
         print(f"Unfortunately, {item_name} is out of stock.")
 # Else, if they pick 3
 elif choice1 == 3:
-    print(f"Thank you for your time {name}, goodbye! ")
+    print(f"")
 # Else
 else:
     print("The input you have given me isn't valid. Pleas try again.")
 # Thank the user for the visit
 print(f"Thank you for your time {name}, we hope to see you again soon.")
-
-
-"""Command line interface to query the stock.
-
-To iterate the source data you can use the following structure:
-
-for item in warehouse1:
-    # Your instructions here.
-    # The `item` name will contain each of the strings (item names) in the list.
-"""
