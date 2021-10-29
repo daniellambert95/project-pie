@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from data import warehouse1, warehouse2
+from data import stock
 
 # Welcome message
 print("Welcome to the Warehouse Ordering System")
@@ -14,26 +14,26 @@ choice1 = int(input("Select the operation you would like to process by entering 
 # If they pick 1
 if choice1 == 1:
     print("\nItems in warehouse 1:\n")
-    for item in warehouse1:
+    for item in stock:
         print("-",item)
     print("\nItems in warehouse 2:\n")
-    for item in warehouse2:
+    for item in stock:
         print("-",item)
 # Else, if they pick 2
 elif choice1 == 2:
     order = "Y"
     while order == "Y":
         item_name = input("Please enter the name of the item you are looking for here: ")
-        if item_name in warehouse1 or item_name in warehouse2:
-            sum_of_item = warehouse1.count(item_name) + warehouse2.count(item_name)
+        if item_name in stock or item_name in stock:
+            sum_of_item = stock.count(item_name) + stock.count(item_name)
             print(f"The total amount of {item_name} is: {sum_of_item}")
-            if item_name in warehouse1 and item_name in warehouse2:
+            if item_name in stock and item_name in stock:
                 print(f"The item {item_name} can be found in both warehouses")
-                if warehouse1.count(item_name) > warehouse2.count(item_name):
-                    print(f"Warehouse1 has more of {item_name} with a total of: {warehouse1.count(item_name)}")
+                if stock.count(item_name) > stock.count(item_name):
+                    print(f"Warehouse1 has more of {item_name} with a total of: {stock.count(item_name)}")
                 else:
-                    print(f"Warehouse2 has more of {item_name} with a total of: {warehouse2.count(item_name)}")
-            elif item_name in warehouse1:
+                    print(f"Warehouse2 has more of {item_name} with a total of: {stock.count(item_name)}")
+            elif item_name in stock:
                 print(f"The item {item_name} can be found in warehouse1")
             else:
                 print(f"The item {item_name} can be found in warehouse2")
