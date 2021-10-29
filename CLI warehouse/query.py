@@ -1,6 +1,17 @@
 #!/usr/bin/env python3
 
 from data import stock
+import tabulate
+
+warehouse_1_stock = []
+for warehouse_item_1 in stock:
+    if warehouse_item_1['warehouse'] == 1:
+        warehouse_1_stock.append(warehouse_item_1)
+
+warehouse_2_stock = []
+for warehouse_item_2 in stock:
+    if warehouse_item_2['warehouse'] == 2:
+        warehouse_2_stock.append(warehouse_item_2)
 
 # Welcome message
 print("Welcome to the Warehouse Ordering System")
@@ -9,18 +20,32 @@ name = input("To proceed further please enter your name here: ")
 # Welcome the user
 print(f"Welcome back {name}!")
 # Show the menu and ask the user to pick a choice
-print("What would you like to do next?\n1. List items in the warehouse\n2. Search for an item and place an order\n3. Quit")
-choice1 = int(input("Select the operation you would like to process by entering 1, 2 or 3: "))
+print("What would you like to do next?\n1. See a tabled list of all the stock \n2. List items in the warehouses seperately\n3. Search for an item and place an order\n4. Quit")
+choice1 = int(input("Select the operation you would like to process by entering 1, 2, 3 or 4: "))
+
 # If they pick 1
+# This will create a nice tabled list of evrything
 if choice1 == 1:
+    print("\nItems in all warehouses:\n")
+    header = stock[0].keys()
+    rows = [x.values() for x in stock]
+    print (tabulate.tabulate(rows, header))
+    
+# If they pick 2
+
+if choice1 == 2:
     print("\nItems in warehouse 1:\n")
-    for item in stock:
-        print("-",item)
+    for item in warehouse_1_stock:
+        print("-",item['state'], item['category'])
+
+    print('\n')
+
     print("\nItems in warehouse 2:\n")
-    for item in stock:
-        print("-",item)
-# Else, if they pick 2
-elif choice1 == 2:
+    for item in warehouse_2_stock:
+        print("-",item['state'], item['category'])
+
+# Else, if they pick 3
+elif choice1 == 3:
     order = "Y"
     while order == "Y":
         item_name = input("Please enter the name of the item you are looking for here: ")
@@ -63,8 +88,8 @@ elif choice1 == 2:
                         print(f"Ok, goodbye {name}!")
     else:
         print(f"Unfortunately, {item_name} is out of stock.")
-# Else, if they pick 3
-elif choice1 == 3:
+# Else, if they pick 4
+elif choice1 == 4:
     print(f"")
 # Else
 else:
