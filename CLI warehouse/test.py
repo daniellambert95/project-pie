@@ -13,16 +13,21 @@ for warehouse_item_2 in stock:
         warehouse_2_stock.append(warehouse_item_2)
 
 item_name = input("Please enter the name of the item you are looking for here: ")
+item_name = item_name.lower()
+item_name = item_name.title()
+
 total_amount = 0
 
+
+
 warehouse_1_amount = 0
-for x in warehouse_1_stock:
-    if x['category'] == item_name:
+for x,y in warehouse_1_stock:
+    if x['state'] == item_name[0] and y['category'] == item_name[1]:
         warehouse_1_amount +=1
 
 warehouse_2_amount = 0
-for x in warehouse_2_stock:
-    if x['category'] == item_name:
+for x,y in warehouse_2_stock:
+    if x['state'] == item_name[0] and y['category'] == item_name[1]:
         warehouse_2_amount +=1
 
 total_amount = (warehouse_1_amount + warehouse_2_amount)
@@ -52,11 +57,11 @@ elif choice1_2 == "Y":
         if order == "N":
             print("That's fine.")
             break
-    elif choice1_2_3 > sum_of_item:
+    elif choice1_2_3 > total_amount:
         print("The amount you have requested exceeds the total amount")
         choice1_2_4 = input("Would you like to order the maximum? Type 'Y' for yes and 'N' for no:  ")
         if choice1_2_4 == "Y":
-            print(f"That's fine {name}, your order of {sum_of_item} X {item_name} has been placed successfully.") 
+            print(f"That's fine {name}, your order of {total_amount} : {item_name} has been placed successfully.") 
             print(f"Would you like to order anything else while you're logged in?")
             order = input("Enter 'Y' for yes or 'N' for no: ")
             if order == "N":
